@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>审计系统</title>
+  <link rel="stylesheet" href="./static/layui/css/layui.css">
+  <link rel="stylesheet" href="./css/editNav.css">
+</head>
+
+<body class="layui-layout-body hide-body-title close-footer mini">
+  <div class="layui-layout layui-layout-admin">
+
+    <!-- 头部 -->
+    <div class="layui-header">
+      <div class="layui-logo">天府新区审计管理系统</div>
+      <div class="mini-logo"><img src="./img/index/miniauditLogo.png" alt=""></div>
+      <ul class="layui-nav layui-layout-left">
+        <li class="layui-nav-item">
+          <a href="javascript:;" id="changeMini">
+            <i class="layui-icon layui-icon-shrink-right"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="layui-nav layui-layout-right">
+        <li class="layui-nav-item">
+          <a href="javascript:;">
+            欢迎你，XXX
+          </a>
+          <dl class="layui-nav-child">
+            <dd><a href="">退出登录</a></dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 侧边栏 -->
+    <div class="layui-side">
+      <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree" lay-filter="admin-side-nav" lay-accordion="true">
+          <p class="overview">Overview</p>
+          <li class="layui-nav-item layui-this">
+            <a data-href="./html/homepage.html" href="javascript:;">
+              <i class="layui-icon layui-icon-home"></i>首页
+            </a>
+          </li>
+          <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;"><i class="layui-icon layui-icon-addition"></i>普通公共模板集合</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;" data-href="./html/titleTime.html">标题及时钟模板</a></dd>
+              <dd><a href="javascript:;" data-href="./html/titleBtn.html">标题及操作按钮模板</a></dd>
+              <dd><a href="javascript:;" data-href="./html/btnGroup.html">按钮组</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;"><i class="layui-icon layui-icon-app"></i>表单相关模板</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;" data-href="./html/formPage.html">表单元素整合模板</a></dd>
+              <dd><a href="javascript:;" data-href="./html/formWrap.html">(无tab)表单页面最外层架子</a></dd>
+              <dd><a href="javascript:;" data-href="./html/tabFormWrap.html">(有tab)表单页面最外层架子</a></dd>
+              <dd><a href="javascript:;" data-href="./html/fileUpOrDl.html">文件上传or文件下载</a></dd>
+            </dl>
+          </li>
+          <li class="layui-nav-item layui-nav-itemed">
+            <a href="javascript:;"><i class="layui-icon layui-icon-layouts"></i>特殊页面相关模板</a>
+            <dl class="layui-nav-child">
+              <dd><a href="javascript:;" data-href="./html/keepOnRecordCatalog.html">备案审计目录模板</a></dd>
+            </dl>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 内容主体区域 -->
+    <div class="layui-body">
+      <iframe name="audit" src="" frameborder="0" style="width: 100%;height: calc(100% - 3px);">
+      </iframe>
+    </div>
+
+  </div>
+
+  <script src="./static/jquery/jquery-2.1.4.min.js"></script>
+  <script src="./static/layui/layui.js"></script>
+  <script src="./js/switchMini.js"></script>
+  <script>
+    //JavaScript代码区域
+    layui.use('element', function () {
+      var element = layui.element;
+
+      // 监听浏览器大小变化
+      // 窗口大小小于450时发生变化
+      $(window).resize(function () {
+        isMini();
+      });
+    });
+  </script>
+</body>
+
+</html>

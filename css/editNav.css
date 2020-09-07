@@ -1,0 +1,156 @@
+/* 修改nav */
+/* 修改top */
+/* 修改body主体 */
+.layui-side .layui-nav,
+.layui-layout-admin .layui-side,
+.layui-side .layui-nav-itemed>a,
+.layui-layout-left .layui-nav-bar,
+.layui-layout-right .layui-nav-bar {
+  background-color: #20345E !important;
+}
+
+.mini-logo {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #287EE7;
+}
+
+.layui-layout-admin .layui-header {
+  background-color: white;
+  height: 60px;
+}
+
+.layui-layout-admin .layui-side {
+  top: 60px;
+  z-index: 9999;
+}
+
+.layui-nav .layui-nav-item {
+  line-height: 60px;
+  color: #000;
+}
+
+.layui-nav-tree .layui-nav-item a {
+  height: 60px;
+  line-height: 60px;
+  color: white;
+}
+
+.layui-layout-left {
+  z-index: 9999;
+}
+
+.layui-layout-left i {
+  color: #000;
+}
+
+.layui-layout-right {
+  background-color: white !important;
+}
+
+.layui-nav-tree .layui-this>a,
+.layui-nav-tree .layui-this,
+.layui-nav-tree .layui-nav-bar,
+.layui-nav-tree .layui-nav-item>a:nth-child(1):hover,
+.layui-nav-tree .layui-this>a:hover {
+  background: rgba(255, 255, 255, .2) !important;
+}
+
+.layui-nav-item a i {
+  margin-right: 10px;
+}
+
+.layui-layout-admin .layui-body {
+  top: 60px;
+  bottom: 0;
+  background: #eee;
+}
+
+.layui-layout-admin .layui-header .layui-logo {
+  color: white;
+  background-color: #287EE7;
+  text-align: center;
+  line-height: 60px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+.layui-layout-left .layui-this:after {
+  background-color: white !important;
+}
+
+.layui-layout-left .layui-nav-item a i {
+  margin: 0;
+}
+
+.layui-layout-right .layui-nav-item>a,
+.layui-layout-right .layui-nav-item:hover>a {
+  padding: 0 25px 0 15px;
+  color: #000;
+}
+
+.layui-layout-right .layui-nav-item .layui-nav-more {
+  border-color: #000 transparent transparent;
+}
+
+.layui-layout-right .layui-nav-item .layui-nav-mored {
+  border-color: transparent transparent #000;
+}
+
+.layui-layout-right .layui-nav-item .layui-nav-child {
+  top: 60px;
+}
+
+.overview {
+  width: 62px;
+  height: 50px;
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #4C86D0;
+  line-height: 50px;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+/* 媒体查询自适应 */
+.mini .layui-side {
+  display: none;
+}
+
+.mini .layui-body {
+  left: 0;
+}
+
+.mini .layui-logo {
+  display: none;
+}
+
+.mini .mini-logo {
+  display: block;
+}
+
+.mini .layui-layout-left {
+  left: 40px;
+}
+
+.layui-layout-left {
+  left: 180px;
+}
+
+.layui-side,
+.layui-body,
+.layui-logo,
+.mini-logo,
+.layui-layout-left,
+.mini .layui-side,
+.mini .layui-body,
+.mini .layui-logo,
+.mini .mini-logo,
+.mini .layui-layout-left {
+  transition: all .5s;
+}

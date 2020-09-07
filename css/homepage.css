@@ -1,0 +1,98 @@
+/* 项目概览 */
+.projectOverview {
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  height: 137px;
+  box-sizing: border-box;
+  padding: 15px 10px 23px 14px;
+  overflow: hidden;
+}
+
+.projectOverview .img {
+  width: 89px;
+  height: 110px;
+  text-align: center;
+  line-height: 110px;
+  float: left;
+  margin-right: 10px;
+}
+
+.projectOverview .text {
+  float: left;
+  width: calc(100% - 99px);
+}
+
+.projectOverview .text p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.projectOverview .text p:nth-child(1) {
+  font-size: 18px;
+  color: #000;
+}
+
+.projectOverview .text p:nth-child(2) {
+  font-size: 24px;
+  margin: 5px 0;
+}
+
+.projectOverview .text p:nth-child(2) span {
+  font-size: 36px;
+  font-weight: 600;
+  margin-right: 20px;
+}
+
+.projectOverview .text p:nth-child(3) {
+  font-size: 16px;
+  color: #747474;
+}
+
+.projectOverviewWrap>div:nth-child(1) p:nth-child(2) {
+  color: #8C98CC;
+}
+
+.projectOverviewWrap>div:nth-child(2) p:nth-child(2) {
+  color: #7ECEF4;
+}
+
+.projectOverviewWrap>div:nth-child(3) p:nth-child(2) {
+  color: #FACE8A;
+}
+
+.projectOverviewWrap>div:nth-child(4) p:nth-child(2) {
+  color: #F19EC2;
+}
+
+.projectOverviewWrap>div:nth-child(5) p:nth-child(2) {
+  color: #00A0E9;
+}
+
+.projectOverviewWrap>div:nth-child(6) p:nth-child(2) {
+  color: #8ACA98;
+}
+
+
+/* 待办及通知公告 */
+/* 业主审计项目分布情况&中介机构审计项目分布情况 */
+/* 项目类型送审金额统计&业主送审金额统计 */
+/* 业主审减率统计&中介机构审减率统计 */
+/* 业主进度情况统计&中介机构进度情况统计 */
+.needDoAndNotice,
+.auditProject,
+.amountOfMoney-statistics,
+.reductionRate-statistics,
+.speedOfProgresse-statistics
+ {
+  height: 400px;
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 24px 30px 30px 30px;
+}
+
+
+
+/* 业主审计项目分布情况&中介机构审计项目分布情况 */

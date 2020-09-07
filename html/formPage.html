@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>表单元素合集模板</title>
+  <link rel="stylesheet" href="../static/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/public.css">
+</head>
+
+<body>
+
+  <!-- 页面标题及操作按钮 -->
+  <div class="layui-row">
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 thisPageTitle"> xxxxxx项目 - 立项资料</div>
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 pageTopBtnList">
+      <!-- 由于用的float:right布局 页面显示为最右侧的按钮代码应写在第一位 依次反向排序过来 -->
+      <button type="button" class="dBtnNormal">返回</button>
+      <button type="button" class="dBtnNormal">项目详情</button>
+    </div>
+  </div>
+
+  <!-- 表单部分 -->
+  <div class="dForm">
+    <!-- 表单顶部 -->
+    <div class="dForm-top">
+      <ul class="dChoose">
+        <li class="this-choose" name="1">tab1</li>
+        <li name="2">tab2</li>
+      </ul>
+      <button type="button" class="dBtnNormal">资料异常提醒</button>
+      <div style="clear: both;"></div>
+    </div>
+    <!-- 表单内容 -->
+    <div class="dForm-cont">
+      <form class="layui-form" action="">
+
+        <!-- 当页面有表单元素时 需引入publicJs 并在页面script部分添加上调用计算input-block的方法 （如页面下方的js方法调用） -->
+        <!-- 表单内容一行内容需在外层包裹一个div class="layui-row layui-col-space10" -->
+        <!-- 输入框下拉框 默认为layui-col-md3 layui-col-sm12 即大屏时占页面1/4 小屏独占一行 -->
+        <!-- 若有样式需求 只需要把md和sm后方的数字大小修改即可 一个layui-row内部数字总和不大于12即可 -->
+        <div class="layui-row layui-col-space10">
+          <div class="layui-col-md3 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">输入框名称</label>
+              <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入项目名称" autocomplete="off"
+                  class="layui-input">
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md3 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">下拉框名称</label>
+              <div class="layui-input-block">
+                <select name="city" lay-verify="">
+                  <option value="">请选择一个下拉框名称</option>
+                  <option value="0">下拉框1</option>
+                  <option value="1">下拉框2</option>
+                  <option value="2">下拉框3</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 表单元素为文本域时默认独占一行 -->
+        <div class="layui-row layui-col-space10">
+          <div class="layui-col-md12 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">文本域标题</label>
+              <div class="layui-input-block">
+                <textarea name="" required lay-verify="required" placeholder="请输入文本域标题"
+                  class="layui-textarea"></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 时间选择器 -->
+        <!-- 时间选择器也默认为屏幕的1/4大小 如有变更修改md3后缀数字即可 -->
+        <div class="layui-row layui-col-space10">
+
+          <div class="layui-col-md3 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">单个时间选择器</label>
+              <div class="layui-input-block">
+                <input type="text" class="layui-input" placeholder="请选择XXX时间" id="timeSelect1">
+              </div>
+            </div>
+          </div>
+
+          <!-- 两个时间选择器所处的dom占屏1/3 如有需求 变更md4为其他数字即可 -->
+          <!-- 当表单是两个时间选择器选择开始截止日期时 需在layui-input-block末尾加上class twoTimer -->
+          <div class="layui-col-md4 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">多个时间选择器</label>
+              <div class="layui-input-block twoTimer">
+                <input type="text" class="layui-input" placeholder="请选择时间1" id="timeSelect2">
+                <span>-</span>
+                <input type="text" class="layui-input" placeholder="请选择时间2" id="timeSelect3">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 当输入框后面需跟单位的情况时 layui-input-block后跟上class haveUnit -->
+        <!-- 同时input同级处跟上span标签(span内容自定义) -->
+        <div class="layui-row layui-col-space10">
+          <div class="layui-col-md3 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">输入框后面带单位</label>
+              <div class="layui-input-block haveUnit">
+                <input type="text" placeholder="输入框后面带单位" class="layui-input">
+                <span>单位X</span>
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md3 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">只读输入框</label>
+              <div class="layui-input-block">
+                <input type="text" placeholder="只读输入框" class="layui-input" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 附件 -->
+        <div class="layui-row layui-col-space10">
+          <div class="layui-col-md3 layui-col-sm12">
+            <label class="layui-form-label">附件</label>
+            <div class="layui-input-block">
+              <button type="button" class="dBtnNormal dBtnDownload" id="upload3">
+                <i class="layui-icon" style="margin-right: 5px;">&#xe67c;</i>附件上传
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 文件上传下载 -->
+        <div class="layui-row layui-col-space10 dUpload-wrap">
+          <div class="layui-col-md6 layui-col-sm12">
+            <div class="dUpload-top">
+              <p>这是文件列表的标题</p>
+              <button type="button" class="dBtnNormal dBtnDownload">全部下载</button>
+              <button type="button" class="dBtnNormal dBtnDownload" id="upload1">
+                <i class="layui-icon" style="margin-right: 5px;">&#xe67c;</i>文件上传
+              </button>
+            </div>
+            <div class="dUpload-list">
+              <p class="oneFileInfo">
+                这是上传后的文件名
+                <a href="javascript:;">预览</a>
+                <a href="javascript:;">下载</a>
+              </p>
+              <p class="oneFileInfo">
+                这是上传后的文件名
+                <a href="javascript:;">预览</a>
+                <a href="javascript:;">下载</a>
+              </p>
+              <p class="oneFileInfo">
+                这是上传后的文件名
+                <a href="javascript:;">预览</a>
+                <a href="javascript:;">下载</a>
+              </p>
+            </div>
+          </div>
+
+          <div class="layui-col-md6 layui-col-sm12">
+            <div class="dUpload-top">
+              <p>这是文件列表的标题</p>
+              <button type="button" class="dBtnNormal dBtnDownload">全部下载</button>
+              <button type="button" class="dBtnNormal dBtnDownload" id="upload2">
+                <i class="layui-icon" style="margin-right: 5px;">&#xe67c;</i>文件上传
+              </button>
+            </div>
+            <div class="dUpload-list">
+              <p class="oneFileInfo">
+                这是上传后的文件名
+                <a href="javascript:;">预览</a>
+                <a href="javascript:;">下载</a>
+                <span class="delete">
+                  <i class="layui-icon layui-icon-reduce-circle"></i>
+                </span>
+              </p>
+              <p class="oneFileInfo">
+                这是上传后的文件名
+                <a href="javascript:;">预览</a>
+                <a href="javascript:;">下载</a>
+              </p>
+              <p class="oneFileInfo">
+                这是上传后的文件名
+                <a href="javascript:;">预览</a>
+                <a href="javascript:;">下载</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </form>
+
+
+      <div class="pageFinalBtn">
+        <button type="button" class="dBtnNormal dBtnDownload">按钮1</button>
+        <button type="button" class="dBtnNormal dBtnDownload">按钮2</button>
+      </div>
+    </div>
+
+    <div class="dForm-cont" style="display: none;">tab2</div>
+  </div>
+
+
+  <script src="../static/layui/layui.js"></script>
+  <script src="../static/layer/layer.js"></script>
+  <script src="../js/publicJs.js"></script>
+  <script>
+    //JavaScript代码区域
+    layui.use(['jquery', 'form', 'laydate', 'upload'], function () {
+      var $ = layui.jquery;
+      var form = layui.form;
+      var upload = layui.upload;
+
+      var laydate = layui.laydate;
+
+      //执行一个laydate实例
+      laydate.render({
+        elem: '#timeSelect1' //指定元素
+      });
+      laydate.render({
+        elem: '#timeSelect2' //指定元素
+      });
+      laydate.render({
+        elem: '#timeSelect3' //指定元素
+      });
+
+      // 页面加载完毕后重置input-block的宽度 实现自适应
+      $(document).ready(function () {
+        countInputBlockWidth();
+      })
+
+      //执行实例
+      var uploadInst = upload.render({
+        elem: '#upload1' //绑定元素
+        , url: '/upload/' //上传接口
+        , accept: 'file'
+        , done: function (res) {
+          //上传完毕回调
+        }
+        , error: function () {
+          //请求异常回调
+        }
+      });
+
+      var uploadInst2 = upload.render({
+        elem: '#upload2' //绑定元素
+        , url: '/upload/' //上传接口
+        , accept: 'file'
+        , done: function (res) {
+          //上传完毕回调
+        }
+        , error: function () {
+          //请求异常回调
+        }
+      });
+
+      var uploadInst2 = upload.render({
+        elem: '#upload3' //绑定元素
+        , url: '/upload/' //上传接口
+        , accept: 'file'
+        , done: function (res) {
+          //上传完毕回调
+        }
+        , error: function () {
+          //请求异常回调
+        }
+      });
+
+    })
+  </script>
+</body>
+
+</html>

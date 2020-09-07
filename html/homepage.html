@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../static/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/public.css">
+  <link rel="stylesheet" href="../css/homepage.css">
+  <title>审计系统</title>
+</head>
+
+<body>
+
+  <!-- 页面标题及时钟 -->
+  <div class="layui-row">
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 thisPageTitle">首页</div>
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6">
+      <div class="timeClock"><img src="../img/public/timeClock.png" alt=""><span id="timeDiv"></span></div>
+    </div>
+  </div>
+
+  <!-- 项目概览 -->
+  <div class="layui-row layui-col-space10 projectOverviewWrap" style="margin-top: 10px;">
+    <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
+      <div class="projectOverview">
+        <a href="javascript:;">
+          <div class="img"><img src="../img/homepage/projectOverview1.png"></div>
+          <div class="text">
+            <p>事前审计项目</p>
+            <p><span>20</span>个</p>
+            <p>5,000,000.00万元</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
+      <div class="projectOverview">
+        <a href="javascript:;">
+          <div class="img"><img src="../img/homepage/projectOverview2.png"></div>
+          <div class="text">
+            <p>事前审计项目</p>
+            <p><span>20</span>个</p>
+            <p>5,000,000.00万元</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
+      <div class="projectOverview">
+        <a href="javascript:;">
+          <div class="img"><img src="../img/homepage/projectOverview3.png"></div>
+          <div class="text">
+            <p>事前审计项目</p>
+            <p><span>20</span>个</p>
+            <p>5,000,000.00万元</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
+      <div class="projectOverview">
+        <a href="javascript:;">
+          <div class="img"><img src="../img/homepage/projectOverview4.png"></div>
+          <div class="text">
+            <p>事前审计项目</p>
+            <p><span>20</span>个</p>
+            <p>5,000,000.00万元</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
+      <div class="projectOverview">
+        <a href="javascript:;">
+          <div class="img"><img src="../img/homepage/projectOverview5.png"></div>
+          <div class="text">
+            <p>事前审计项目</p>
+            <p><span>20</span>个</p>
+            <p>5,000,000.00万元</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
+      <div class="projectOverview">
+        <a href="javascript:;">
+          <div class="img"><img src="../img/homepage/projectOverview6.png"></div>
+          <div class="text">
+            <p>事前审计项目</p>
+            <p><span>20</span>个</p>
+            <p>5,000,000.00万元</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="layui-row layui-col-space10">
+    <!-- 待办及通知公告 -->
+    <div class="layui-col-md7 layui-col-sm12 layui-col-xs12">
+      <div class="needDoAndNotice homepageChoose">
+        <ul class="dChoose">
+          <li class="this-choose" name="1">待办</li>
+          <li name="2">通知公告</li>
+        </ul>
+        <!-- 待办 -->
+        <div>1</div>
+        <!-- 通知公告 -->
+        <div style="display: none;">2</div>
+      </div>
+    </div>
+    <!-- 业主审计项目分布情况&中介机构审计项目分布情况 -->
+    <div class="layui-col-md5 layui-col-sm12 layui-col-xs12">
+      <div class="auditProject homepageChoose">
+        <ul class="dChoose">
+          <li class="this-choose" name="1">业主审计项目分布情况</li>
+          <li name="2">中介机构审计项目分布情况</li>
+        </ul>
+        <!-- 业主审计项目分布情况 -->
+        <div>1</div>
+        <!-- 中介机构审计项目分布情况 -->
+        <div style="display: none;">2</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layui-row layui-col-space10">
+    <!-- 项目类型送审金额统计&业主送审金额统计 -->
+    <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+      <div class="amountOfMoney-statistics homepageChoose">
+        <ul class="dChoose">
+          <li class="this-choose" name="1">项目类型送审金额统计</li>
+          <li name="2">业主送审金额统计</li>
+        </ul>
+        <!-- 项目类型送审金额统计 -->
+        <div>1</div>
+        <!-- 业主送审金额统计 -->
+        <div style="display: none;">2</div>
+      </div>
+    </div>
+
+    <!-- 业主审减率统计&中介机构审减率统计 -->
+    <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+      <div class="reductionRate-statistics homepageChoose">
+        <ul class="dChoose">
+          <li class="this-choose" name="1">业主审减率统计</li>
+          <li name="2">中介机构审减率统计</li>
+        </ul>
+        <!-- 业主审减率统计 -->
+        <div>1</div>
+        <!-- 中介机构审减率统计 -->
+        <div style="display: none;">2</div>
+      </div>
+    </div>
+
+    <!-- 业主进度情况统计&中介机构进度情况统计 -->
+    <div class="layui-col-md4 layui-col-sm12 layui-col-xs12">
+      <div class="speedOfProgresse-statistics homepageChoose">
+        <ul class="dChoose">
+          <li class="this-choose" name="1">业主进度情况统计</li>
+          <li name="2">中介机构进度情况统计</li>
+        </ul>
+        <!-- 业主进度情况统计 -->
+        <div>1</div>
+        <!-- 中介机构进度情况统计 -->
+        <div style="display: none;">2</div>
+      </div>
+    </div>
+  </div>
+  
+
+  <script src="../static/jquery/jquery-2.1.4.min.js"></script>
+  <script src="../static/layui/layui.js"></script>
+  <script src="../js/publicJs.js"></script>
+  <script>
+    //JavaScript代码区域
+    layui.use('jquery', function () {
+      var $ = layui.jquery;
+      $(document).ready(function () {
+        displayTime();
+        start();
+      })
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+body {
+  box-sizing: border-box;
+  padding: 20px 15px;
+}
+
+.layui-input {
+  border-radius: 5px;
+}
+
+.thisPageTitle {
+  height: 30px;
+  line-height: 30px;
+  font-size: 20px;
+  font-weight: 600;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.timeClock {
+  float: right;
+  background-color: white;
+  padding: 4px 20px 4px 10px;
+  overflow: hidden;
+}
+
+.timeClock span {
+  margin-left: 20px;
+}
+
+.dBtnNormal {
+  height: 38px;
+  line-height: 36px;
+  padding: 0 18px;
+  background-color: white;
+  color: #3C70AE;
+  white-space: nowrap;
+  text-align: center;
+  font-size: 14px;
+  border: 2px solid #3C70AE;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.dBtnDownload {
+  background-color: #277DE7;
+  color: white;
+  border: 2px solid #277DE7;
+}
+
+.dChoose {
+  height: 24px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 30px;
+}
+
+.dChoose li {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0 18px;
+  border-left: 1px solid #C1C1C1;
+}
+
+.dChoose li:nth-child(1) {
+  padding: 0 18px 0 0;
+  border-left: none;
+}
+
+.dChoose .this-choose {
+  color: #287EE7;
+  font-weight: 600;
+}
+
+.pageTopBtnList .dBtnNormal {
+  float: right;
+  margin-left: 14px;
+}
+
+.dForm {
+  background-color: white;
+  border: 2px solid #E5E5E5;
+  margin-top: 20px;
+}
+
+.dForm .dForm-top {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-bottom: 2px solid #E5E5E5;
+}
+
+.dForm .dForm-top .dChoose {
+  width: 70%;
+  float: left;
+  margin-bottom: 0;
+  position: relative;
+  top: 8px;
+}
+
+.dForm .dForm-top button {
+  float: right;
+  color: #747474;
+  border-color: #E5E5E5;
+}
+
+.dForm .dForm-cont {
+  box-sizing: border-box;
+  padding: 20px 20px 30px 10px;
+}
+
+.layui-form-select dl dd.layui-this,
+.layui-laydate .layui-laydate-content .layui-this {
+  background-color: #287EE7 !important;
+}
+
+.dForm .twoTimer .layui-input {
+  width: calc(50% - 10px);
+  float: left;
+}
+
+.dForm .twoTimer span {
+  width: 20px;
+  line-height: 38px;
+  text-align: center;
+  float: left;
+}
+
+.dForm .haveUnit {
+  position: relative;
+}
+
+.dForm .haveUnit .layui-input {
+  padding-right: 50px;
+}
+
+.dForm .haveUnit span {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+.dUpload-wrap {
+  background-color: white;
+  border-top: 1px solid #E5E5E5;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.dUpload-wrap .dUpload-top {
+  margin-bottom: 20px;
+}
+
+.dUpload-wrap .dUpload-top p {
+  display: inline-block;
+}
+
+.dUpload-wrap .dUpload-top button {
+  margin-left: 10px;
+}
+
+.dUpload-wrap .dUpload-list .oneFileInfo {
+  color: #747474;
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  padding-left: 40px;
+  position: relative;
+}
+
+.dUpload-wrap .dUpload-list .oneFileInfo a {
+  color: #FF8712;
+  margin-left: 20px;
+}
+
+.dUpload-wrap .dUpload-list .oneFileInfo .delete {
+  color: red;
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.pageFinalBtn {
+  margin: 20px 0 10px 0;
+  text-align: center;
+}
+
+.pageFinalBtn button {
+  margin: 0 10px;
+}

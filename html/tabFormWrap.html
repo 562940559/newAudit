@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(无tab)表单页面最外层架子</title>
+  <link rel="stylesheet" href="../static/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/public.css">
+</head>
+
+<body>
+
+  <!-- 页面标题及操作按钮 -->
+  <div class="layui-row">
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 thisPageTitle"> xxxxxx项目 - 立项资料</div>
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 pageTopBtnList">
+      <button type="button" class="dBtnNormal">按钮</button>
+    </div>
+  </div>
+
+  <!-- 表单部分 -->
+  <div class="dForm">
+    <!-- 表单顶部 -->
+    <div class="dForm-top">
+      <ul class="dChoose">
+        <li class="this-choose" name="1">tab1</li>
+        <li name="2">tab2</li>
+        <li name="3">tab3</li>
+        <li name="4">tab4</li>
+      </ul>
+      <button type="button" class="dBtnNormal">按钮</button>
+      <div style="clear: both;"></div>
+    </div>
+    <!-- 表单内容 -->
+    <div class="dForm-cont">tab1</div>
+    <div class="dForm-cont" style="display: none;">tab2</div>
+    <div class="dForm-cont" style="display: none;">tab3</div>
+    <div class="dForm-cont" style="display: none;">tab4</div>
+  </div>
+
+
+  <script src="../static/layui/layui.js"></script>
+  <script src="../js/publicJs.js"></script>
+  <script>
+    //JavaScript代码区域
+    layui.use(['jquery', 'form', 'laydate'], function () {
+      var $ = layui.jquery;
+      var form = layui.form;
+
+      var laydate = layui.laydate;
+
+      //执行一个laydate实例
+      laydate.render({
+        elem: '#timeSelect1' //指定元素
+      });
+      laydate.render({
+        elem: '#timeSelect2' //指定元素
+      });
+      laydate.render({
+        elem: '#timeSelect3' //指定元素
+      });
+
+      // 页面加载完毕后重置input-block的宽度 实现自适应
+      $(document).ready(function () {
+        countInputBlockWidth();
+      })
+
+    })
+  </script>
+</body>
+
+</html>

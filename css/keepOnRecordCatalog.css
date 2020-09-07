@@ -1,0 +1,86 @@
+.auditList-wrap { 
+  border: 2px solid #E5E5E5;
+  background-color: white;
+  margin-top: 10px;
+}
+
+.auditList-wrap .auditTitle {
+  height: 60px;
+  border-bottom: 1px solid #E5E5E5;
+  box-sizing: border-box;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+}
+
+.auditList-wrap .auditTitle b {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.auditList-wrap .auditTitle span {
+  font-size: 16px;
+  color: #000000;
+}
+
+.auditList {
+  padding: 24px 50px;
+}
+
+.auditList a {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: white;
+  color: #343434;
+  border: 1px solid #BFBFBF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+.auditList .ban {
+  border: none;
+  background-color: #e5e5e5;
+}
+
+.auditList .error {
+  border: none;
+  background-color: #F9ABB4;
+}
+
+.before .right {
+  color: #287EE7;
+  border: 2px solid #287EE7;
+  font-weight: bold;
+}
+
+.before b {
+  background-color: #287EE7;
+}
+
+.now .right {
+  color: #FF8812;
+  border: 2px solid #FF8812;
+  font-weight: bold;
+}
+
+.now b {
+  background-color: #FF8812;
+}
+
+.later .right {
+  color: #1CA2CA;
+  border: 2px solid #1CA2CA;
+  font-weight: bold;
+}
+
+.later b {
+  background-color: #1CA2CA;
+}
