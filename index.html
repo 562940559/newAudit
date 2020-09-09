@@ -14,13 +14,16 @@
 
     <!-- 头部 -->
     <div class="layui-header">
-      <div class="layui-logo">天府新区审计管理系统</div>
+      <div class="layui-logo"><img src="./img/index/miniauditLogo.png" alt="">天府新区审计管理系统</div>
       <div class="mini-logo"><img src="./img/index/miniauditLogo.png" alt=""></div>
       <ul class="layui-nav layui-layout-left">
-        <li class="layui-nav-item">
+        <li class="layui-nav-item changeMini">
           <a href="javascript:;" id="changeMini">
             <i class="layui-icon layui-icon-shrink-right"></i>
           </a>
+        </li>
+        <li class="layui-nav-item clockTime">
+          <p>当前时间：<span id="showtime"></span></p>
         </li>
       </ul>
       <ul class="layui-nav layui-layout-right">
@@ -49,7 +52,6 @@
           <li class="layui-nav-item layui-nav-itemed">
             <a href="javascript:;"><i class="layui-icon layui-icon-addition"></i>普通公共模板集合</a>
             <dl class="layui-nav-child">
-              <dd><a href="javascript:;" data-href="./html/titleTime.html">标题及时钟模板</a></dd>
               <dd><a href="javascript:;" data-href="./html/titleBtn.html">标题及操作按钮模板</a></dd>
               <dd><a href="javascript:;" data-href="./html/btnGroup.html">按钮组</a></dd>
             </dl>
@@ -67,6 +69,7 @@
             <a href="javascript:;"><i class="layui-icon layui-icon-layouts"></i>特殊页面相关模板</a>
             <dl class="layui-nav-child">
               <dd><a href="javascript:;" data-href="./html/keepOnRecordCatalog.html">备案审计目录模板</a></dd>
+              <dd><a href="javascript:;" data-href="./html/lotNumber.html">摇号</a></dd>
             </dl>
           </li>
         </ul>
@@ -84,6 +87,7 @@
   <script src="./static/jquery/jquery-2.1.4.min.js"></script>
   <script src="./static/layui/layui.js"></script>
   <script src="./js/switchMini.js"></script>
+  <script src="./js/clockTime.js"></script>
   <script>
     //JavaScript代码区域
     layui.use('element', function () {
@@ -94,6 +98,11 @@
       $(window).resize(function () {
         isMini();
       });
+
+      // 刷新页面即加载时钟
+      $(document).ready(function () {
+        displayDate();
+      })
     });
   </script>
 </body>

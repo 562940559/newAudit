@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>摇号界面</title>
+  <link rel="stylesheet" href="../static/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/lotNumber.css">
+</head>
+
+<body>
+
+  <div class="lotNumber-wrap">
+    <div class="closeBtn">关闭</div>
+    <div class="bigBtn">
+      <p class="startLot">开始摇号</p>
+      <p class="endLot" style="display: none;">结束摇号</p>
+      <p class="btnLotResult" style="display: none;">摇号结果</p>
+    </div>
+    <div class="lotResult-wrap">
+      <p class="lotResult">1</p>
+    </div>
+    <div class="sureBtn">确定</div>
+  </div>
+
+  <script src="../static/jquery/jquery-2.1.4.min.js"></script>
+  <script src="../static/layui/layui.js"></script>
+
+  <script>
+    layui.use(['jquery', 'form', 'layer'], function () {
+      var $ = layui.jquery;
+      var form = layui.form;
+
+      $('.sureBtn').click(function () {
+        console.log('1', $(parent))
+      })
+    })
+  </script>
+
+  <script src="../js/lotNumber.js"></script>
+
+</body>
+
+</html>

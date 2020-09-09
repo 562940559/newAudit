@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>摇号</title>
+  <link rel="stylesheet" href="../static/layui/css/layui.css">
+  <link rel="stylesheet" href="../css/public.css">
+</head>
+
+<body>
+
+  <!-- 页面标题及操作按钮 -->
+  <div class="layui-row">
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 thisPageTitle"> xxxxxx项目 - 立项资料</div>
+    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 pageTopBtnList">
+      <button type="button" class="dBtnNormal">返回</button>
+    </div>
+  </div>
+
+  <!-- 表单部分 -->
+  <div class="dForm">
+    <!-- 表单内容 -->
+    <div class="dForm-cont">
+      <form class="layui-form" action="">
+        <div class="layui-row">
+          <div class="layui-col-md6 layui-col-sm12">
+            <div class="layui-col-md7 layui-col-sm12">
+              <div class="layui-form-item">
+                <label class="layui-form-label">中介机构</label>
+                <div class="layui-input-block">
+                  <input type="text" name="title" required lay-verify="required" placeholder="请输入中介机构"
+                    autocomplete="off" class="layui-input">
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-md5 layui-col-sm12">
+              <button type="button" class="dBtnNormal" style="margin: 0 10px;">自行选择</button>
+              <button type="button" class="dBtnNormal dBtnDownload">摇号</button>
+            </div>
+          </div>
+        </div>
+        <div class="layui-row">
+          <div class="layui-col-md5 layui-col-sm12">
+            <div class="layui-form-item">
+              <label class="layui-form-label">中介机构</label>
+              <div class="layui-input-block">
+                <input type="text" name="title" required lay-verify="required" placeholder="请输入中介机构" autocomplete="off"
+                  class="layui-input">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="../static/layui/layui.js"></script>
+  <script src="../js/publicJs.js"></script>
+  <script>
+    layui.use(['jquery', 'form', 'layer'], function () {
+      var $ = layui.jquery;
+      var form = layui.form;
+
+      layer.open({
+        type: 2,
+        title: '摇号',
+        shadeClose: false,
+        closeBtn: false,
+        title: false,
+        shade: 0.8,
+        area: ['1360px','773px'],
+        content: '../html/1.html' //iframe的url
+      });
+    })
+  </script>
+</body>
+
+</html>

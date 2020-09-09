@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  padding: 20px 15px;
+  padding: 10px 15px;
 }
 
 .layui-input {
@@ -83,7 +83,7 @@ body {
 .dForm {
   background-color: white;
   border: 2px solid #E5E5E5;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .dForm .dForm-top {
@@ -194,4 +194,8 @@ body {
 
 .pageFinalBtn button {
   margin: 0 10px;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+  background-color: #277DE7!important;
 }

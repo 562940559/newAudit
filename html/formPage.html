@@ -155,16 +155,9 @@
                 这是上传后的文件名
                 <a href="javascript:;">预览</a>
                 <a href="javascript:;">下载</a>
-              </p>
-              <p class="oneFileInfo">
-                这是上传后的文件名
-                <a href="javascript:;">预览</a>
-                <a href="javascript:;">下载</a>
-              </p>
-              <p class="oneFileInfo">
-                这是上传后的文件名
-                <a href="javascript:;">预览</a>
-                <a href="javascript:;">下载</a>
+                <span class="delete">
+                  <i class="layui-icon layui-icon-reduce-circle"></i>
+                </span>
               </p>
             </div>
           </div>
@@ -186,16 +179,6 @@
                   <i class="layui-icon layui-icon-reduce-circle"></i>
                 </span>
               </p>
-              <p class="oneFileInfo">
-                这是上传后的文件名
-                <a href="javascript:;">预览</a>
-                <a href="javascript:;">下载</a>
-              </p>
-              <p class="oneFileInfo">
-                这是上传后的文件名
-                <a href="javascript:;">预览</a>
-                <a href="javascript:;">下载</a>
-              </p>
             </div>
           </div>
         </div>
@@ -214,11 +197,10 @@
 
 
   <script src="../static/layui/layui.js"></script>
-  <script src="../static/layer/layer.js"></script>
   <script src="../js/publicJs.js"></script>
   <script>
     //JavaScript代码区域
-    layui.use(['jquery', 'form', 'laydate', 'upload'], function () {
+    layui.use(['jquery', 'form', 'laydate', 'upload', 'layer'], function () {
       var $ = layui.jquery;
       var form = layui.form;
       var upload = layui.upload;
@@ -277,6 +259,20 @@
           //请求异常回调
         }
       });
+
+      // 点击删除当前dom
+      $('.oneFileInfo .delete').click(function () {
+        let _this = this;
+        layer.confirm('确定删除该条文件吗', {
+          btn: ['确定', '取消'], //按钮
+          title: false,
+        }, function () {
+          $(_this).parent().remove();
+          layer.closeAll();
+        }, function () {
+          
+        });
+      })
 
     })
   </script>

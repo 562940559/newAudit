@@ -1,0 +1,70 @@
+.lotNumber-wrap {
+  width: 1360px;
+  height: 773px;
+  background: url('../img/lotNumber/lotNumberBg.png');
+  background-size: 100% 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.bigBtn {
+  width: 243px;
+  height: 243px;
+  background: url('../img/lotNumber/lotNubBigBtn.png');
+  margin: 40px auto;
+}
+
+.bigBtn p {
+  height: 243px;
+  line-height: 243px;
+  text-align: center;
+  color: #0E7291;
+  font-size: 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.closeBtn {
+  color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.lotResult-wrap {
+  width: 476px;
+  height: 76px;
+  border: 1px solid #EEEEEE;
+  background: #FFFFFF;
+  margin: 60px auto;
+}
+
+.lotResult-wrap p {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: center;
+  line-height: 76px;
+  height: 76px;
+  color: #333;
+  font-size: 20px;
+}
+
+.sureBtn {
+  margin: 150px auto 0 auto;
+  width: 230px;
+  height: 70px;
+  background: rgba(255,255,255,.2);
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  line-height: 70px;
+  font-size: 22px;
+  display: none;
+  cursor: pointer;
+}

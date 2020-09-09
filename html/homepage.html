@@ -12,14 +12,6 @@
 
 <body>
 
-  <!-- 页面标题及时钟 -->
-  <div class="layui-row">
-    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6 thisPageTitle">首页</div>
-    <div class="layui-col-md6 layui-col-sm6 layui-col-xs6">
-      <div class="timeClock"><img src="../img/public/timeClock.png" alt=""><span id="timeDiv"></span></div>
-    </div>
-  </div>
-
   <!-- 项目概览 -->
   <div class="layui-row layui-col-space10 projectOverviewWrap" style="margin-top: 10px;">
     <div class="layui-col-md2 layui-col-xs12 layui-col-sm6">
@@ -177,10 +169,7 @@
     //JavaScript代码区域
     layui.use('jquery', function () {
       var $ = layui.jquery;
-      $(document).ready(function () {
-        displayTime();
-        start();
-      })
+      
     })
   </script>
 </body>
